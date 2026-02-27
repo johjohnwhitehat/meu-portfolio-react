@@ -1,0 +1,60 @@
+# RELATÓRIO TÉCNICO E EXERCÍCIOS DE VERSIONAMENTO
+
+## PARTE 1: Simulação de Decisão (Comitê Técnico EduTech)
+
+**1. Ferramenta Escolhida:** GitHub (Plano Team)
+
+**2. Justificativa:**
+* **CI/CD:** Utilização do GitHub Actions para automação de testes e deploys na AWS, garantindo que o código em produção seja sempre estável.
+* **Code Review:** Uso de Pull Requests para revisão entre os 8 desenvolvedores, essencial para manter a qualidade e o aprendizado compartilhado.
+* **Documentação:** Centralização de manuais no GitHub Wiki e documentação técnica no README.md.
+* **Escalabilidade:** O GitHub facilita a entrada de novos colaboradores (onboarding), suportando o plano de dobrar a equipe em um ano.
+
+**3. Orçamento:** O custo aproximado de US$ 44/mês (para 11 usuários) se encaixa no orçamento de R$ 500/mês, oferecendo ferramentas profissionais de governança sem necessidade de gerenciar servidores próprios.
+
+---
+
+## PARTE 2: Respostas do Roteiro de Atividade Prática
+
+### 1. Nomes Descritivos de Repositórios
+Nomes claros funcionam como o "cartão de visitas" do projeto. Um nome como `biblioteca-api-node-express` comunica imediatamente a função e a stack técnica.
+* **Exemplos:** Para Front-end, `portfolio-react-tailwind` é ideal. Para Back-end, `biblioteca-api-rest-jest` indica domínio de testes.
+* **Impacto:** Facilita a busca (SEO do GitHub) para recrutadores e reduz a barreira de entrada para novos contribuidores, que já sabem o que esperar antes de abrir o código.
+
+### 2. Repositórios Públicos vs. Privados
+* **Públicos:** Essenciais para Portfólios e APIs de estudo. Servem como "currículo vivo" e prova social de competência técnica.
+* **Privados:** Devem ser usados para projetos comerciais com regras de negócio sigilosas, dados sensíveis de clientes ou quando o código ainda contém chaves de acesso (secrets) que não foram devidamente isoladas.
+
+### 3. README: O que não pode faltar?
+O README é o manual que acelera a adoção do projeto.
+* **Na API (Back-end):** Documentação dos Endpoints (ex: `GET /livros`), requisitos de versão do Node, variáveis de ambiente necessárias (`.env`) e comandos de teste.
+* **No Portfólio (Front-end):** Link para o Deploy funcional (Vercel/GitHub Pages), GIFs ou Screenshots das telas e lista de componentes principais (Ex: Header, ProjectCard).
+
+### 4. O papel de Issues, Branches e Pull Requests
+Essas ferramentas transformam o desenvolvimento em um processo de engenharia previsível.
+* **Fluxo Concreto:**
+    1. **Issue:** Define a tarefa (ex: "Criar rota POST /livros").
+    2. **Branch:** Isola o trabalho (`feature/rota-livros`).
+    3. **PR (Pull Request):** Solicita a integração, descrevendo as mudanças e vinculando a issue (`Closes #1`).
+    4. **Code Review:** Um par analisa o código e sugere melhorias.
+    5. **Merge/Release:** O código vai para a `main` e uma tag de versão (`v0.1.0`) é gerada para marcar a entrega estável.
+
+---
+
+## PARTE 3: Estruturas Auxiliares (Bônus)
+
+### Sugestão de Pull Request Template (.github/PULL_REQUEST_TEMPLATE.md)
+```markdown
+## 📝 Descrição
+O que foi feito neste PR?
+
+## 🔗 Issues vinculadas
+- Closes #
+
+## ✅ Checklist
+- [ ] O código segue os padrões do projeto.
+- [ ] Testes foram realizados e passaram.
+- [ ] O README foi atualizado (se necessário).
+
+## 📸 Screenshots (Obrigatório para Front-end)
+[Insira aqui]
